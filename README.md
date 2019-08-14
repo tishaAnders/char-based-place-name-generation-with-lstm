@@ -2,6 +2,11 @@
 
 ![Ooops, this image isn't working](images/WhatsApp_Image_2019-08-14_at_20.08.45.png)
 
+## Brief description
+With this file, you can generate imaginary British place names. 
+
+For example, in the past, it has created _Dunby_, _Mongrave_, _Carneyh_,  _Warer Forest_ and _Balcland on the Green_. 
+
 ## Dataset
 
 14679 English place names have been collected from the [Oxford Reference Website](https://www.oxfordreference.com/view/10.1093/acref/9780199609086.001.0001/acref-9780199609086).
