@@ -64,13 +64,19 @@ A place name that has integer denotation `6829`would now look like this: `111111
 This way, I could slide a window which comprises 28 chars along each (padded) place name and thus create training examples as in the table above.
 
 ## Model
-I am using 3 LSTMs and a Dense layer stacked together. The LSTMs detect long-term dependencies between letters in the word. To learn more about LSTMs, either visit [this post]https://medium.com/datathings/the-magic-of-lstm-neural-networks-6775e8b540cd) for some basic understanding, or [this mlreview article](https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714) for in-depth details. 
+I am using 3 LSTMs with Dropout and a Dense layer stacked together. The LSTMs detect long-term dependencies between letters in the word. To learn more about LSTMs, either visit [this post]https://medium.com/datathings/the-magic-of-lstm-neural-networks-6775e8b540cd) for some basic understanding, or [this mlreview article](https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714) for in-depth details. 
 I chose a low dropout rate (0.01) since I have a lot of training examples which makes overfitting unlikely. 
+
+
+## Training
+On my Nvidia Geforce RTX2070, one epoch of the GPU version took 52 seconds to train. However, the CPU version took about 1700 seconds to train on 6 Intel(R) Core i5-8400 CPU@2.80GHz. 
+
+### CPU vs. GPU
+I have uploaded two versions, depending on which device you have in use. Note that unless you are using the preloaded weights in the CPU version, the model might take very long to train. 
 
 ### Saving weights
 I'm using the checkpoint method to save and reuse weights generated in earlier epochs. Thus, output can be generated without having to train the NN every time. 
 
-## CPU vs. GPU
-I have uploaded two versions, depending on which device you have in use. Note that unless you are using the preloaded weights in the CPU version, the model might take very long to train. 
-
+#### Pretrained weights
+You can either train the network by yourself, or use the pre-trained weights from the corresponding .hdf5 file ([ModelCheckpoint method](https://keras.io/callbacks/#modelcheckpoint))
 
