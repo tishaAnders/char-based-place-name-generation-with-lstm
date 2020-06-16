@@ -64,7 +64,7 @@ A place name that has integer denotation `6829`would now look like this: `111111
 This way, I could slide a window which comprises 28 chars along each (padded) place name and thus create training examples as in the table above.
 
 ## Model
-I am using 3 LSTMs with Dropout and a Dense layer stacked together. The LSTMs detect long-term dependencies between letters in the word. To learn more about LSTMs, either visit [this post]https://medium.com/datathings/the-magic-of-lstm-neural-networks-6775e8b540cd) for some basic understanding, or [this mlreview article](https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714) for in-depth details. 
+I am using 3 LSTMs with Dropout and a Dense layer stacked together. The LSTMs detect long-term dependencies between letters in the word. To learn more about LSTMs, either visit [this post](https://medium.com/datathings/the-magic-of-lstm-neural-networks-6775e8b540cd) for some basic understanding, or [this mlreview article](https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714) for in-depth details. 
 I chose a low dropout rate (0.01) since I have a lot of training examples which makes overfitting unlikely. 
 
 
